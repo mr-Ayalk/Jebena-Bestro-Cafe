@@ -1,15 +1,25 @@
 import React from "react";
 import { ShoppingCart, Menu, ChevronDown } from "lucide-react";
-
+import Image from "next/image";
+import Logo from "../assets/images/jebenalogo.png";
 const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
             <div className="container flex items-center justify-between h-20">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <div className="text-2xl font-bold flex items-center">
-                        <span className="text-orange-500 italic">Taste</span>
-                        <span className="text-black">Nest</span>
+                    <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
+                        <Image
+                            src={Logo}
+                            alt="Logo"
+                            fill
+                            className="rounded-full object-cover transition-transform group-hover:scale-110"
+                        />
+                    </div>
+                    <div className="text-2xl font-bold flex items-center gap-1">
+                        <span className="text-orange-500 italic">Jebena </span>
+                        {"  "}
+                        <span className="text-black">Bestro</span>
                     </div>
                 </div>
 
