@@ -87,7 +87,7 @@ const PromoCards = () => {
                             )}
 
                             {/* Optimized Product Image Container */}
-                            <div className="absolute right-[-20px] bottom-[-20px] w-2/3 h-2/3 z-20 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
+                            {/* <div className="absolute right-[-20px] bottom-[-20px] w-2/3 h-2/3 z-20 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
                                 <Image
                                     src={card.image}
                                     alt={card.title}
@@ -96,7 +96,7 @@ const PromoCards = () => {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     priority={index === 0} // Loads the first image faster for LCP
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>

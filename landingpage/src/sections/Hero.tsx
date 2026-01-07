@@ -27,7 +27,7 @@ const Hero = () => {
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
                         The best Food <br />
-                        Collection 2024
+                        Collection 2026
                     </h1>
 
                     <div className="mb-10">
