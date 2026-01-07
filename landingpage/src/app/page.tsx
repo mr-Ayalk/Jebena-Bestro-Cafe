@@ -1,3 +1,4 @@
+import AboutFood from "@/sections/AboutFood";
 import AboutSection from "@/sections/AboutSection";
 import Hero from "@/sections/Hero";
 import HotDeliciousSection from "@/sections/HotDeliciousSection";
@@ -12,6 +13,7 @@ export default function Home() {
             <PromoCards />
             <AboutSection />
             <HotDeliciousSection />
+            <AboutFood />
         </div>
     );
 }
