@@ -6,6 +6,7 @@ import HotDeliciousSection from "@/sections/HotDeliciousSection";
 import HowWeServe from "@/sections/HowWeServe";
 import Navbar from "@/sections/Navbar";
 import PromoCards from "@/sections/PromoCards";
+import TrendingMenu from "@/sections/TrendingMenu";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <PromoCards />
             <AboutSection />
             <HotDeliciousSection />
+            <TrendingMenu />
             <AboutFood />
             <HowWeServe />
             <Footer />
