@@ -1,8 +1,8 @@
 import AboutSection from "@/sections/AboutSection";
 import Hero from "@/sections/Hero";
+import HotDeliciousSection from "@/sections/HotDeliciousSection";
 import Navbar from "@/sections/Navbar";
 import PromoCards from "@/sections/PromoCards";
-import PromoGrid from "@/sections/PromoGrid";
 
 export default function Home() {
     return (
@@ -11,6 +11,7 @@ export default function Home() {
             <Hero />
             <PromoCards />
             <AboutSection />
+            <HotDeliciousSection />
         </div>
     );
 }
