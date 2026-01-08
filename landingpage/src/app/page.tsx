@@ -2,6 +2,7 @@ import AboutFood from "@/sections/AboutFood";
 import AboutSection from "@/sections/AboutSection";
 import BestOffer from "@/sections/BestOffer";
 import BestSellers from "@/sections/BestSellers";
+import BeverageMenu from "@/sections/BeverageMenu";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import HowWeServe from "@/sections/HowWeServe";
@@ -22,7 +23,8 @@ export default function Home() {
             <AboutSection />
             {/* <HotDeliciousSection /> */}
             <TrendingMenu />
-            <BestOffer />
+            <BeverageMenu />
+            {/* <BestOffer /> */}
             <AboutFood />
             <HowWeServe />
             <Testimonial />

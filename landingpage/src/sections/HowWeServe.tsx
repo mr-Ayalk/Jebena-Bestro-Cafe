@@ -27,7 +27,8 @@ const HowWeServe = () => {
             <div className="container mx-auto px-4 xs:px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h4 className="text-[#00A859] font-bold text-xs uppercase tracking-widest mb-3">
+                    <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
+                        {" "}
                         Food Processing
                     </h4>
                     <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A] uppercase tracking-tight">

@@ -8,9 +8,12 @@ const AboutFood = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content Side */}
                     <div className="space-y-6">
-                        <h4 className="text-[#00A859] font-semibold text-sm tracking-wide uppercase">
+                        <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                             About Our Food
                         </h4>
+                        {/* <h4 className="text-[#00A859] font-semibold text-sm tracking-wide uppercase">
+                            About Our Food
+                        </h4> */}
 
                         <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] leading-tight">
                             Where Quality Meet{" "}

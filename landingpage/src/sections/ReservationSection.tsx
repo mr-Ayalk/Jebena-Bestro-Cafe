@@ -21,9 +21,10 @@ const ReservationSection = () => {
                         <div>
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="w-10 h-[3px] bg-[#00A859] rounded-full"></span>
-                                <span className="text-[#00A859] font-black text-[10px] uppercase tracking-[0.3em]">
+
+                                <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                                     Reservations
-                                </span>
+                                </h4>
                             </div>
                             <h2 className="text-3xl font-black text-gray-900 mb-8">
                                 Book Your{" "}

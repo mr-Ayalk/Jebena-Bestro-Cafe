@@ -95,9 +95,9 @@ const BestOffer: React.FC = () => {
         <section className="py-10 bg-[#FAFAFA]">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex flex-col items-center mb-2 text-center">
-                    <span className="text-[#00A859] font-bold text-xs uppercase tracking-[0.3em] mb-2">
+                    <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                         Special Deals
-                    </span>
+                    </h4>
                     <h2 className="text-4xl font-black text-[#1A1A1A]">
                         Best Offer For You
                     </h2>

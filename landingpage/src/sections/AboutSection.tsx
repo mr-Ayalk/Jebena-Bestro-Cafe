@@ -53,9 +53,9 @@ const AboutSection = () => {
 
                     {/* Right Side: Content */}
                     <div className="flex flex-col">
-                        <span className="text-[#00A859] font-bold text-sm uppercase tracking-[0.2em] mb-4">
+                        <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                             About Our Food
-                        </span>
+                        </h4>
 
                         <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] leading-tight mb-8">
                             The Best Delicious Food <br /> Made From Us...

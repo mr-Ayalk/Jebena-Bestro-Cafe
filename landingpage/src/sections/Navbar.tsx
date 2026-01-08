@@ -41,8 +41,8 @@ const Navbar = () => {
                             className="rounded-full object-cover transition-transform group-hover:scale-110"
                         />
                     </div>
-                    <div className="text-2xl font-bold flex items-center gap-1">
-                        <span className="text-[#FF385C] italic">Jebena </span>
+                    <div className="  tracking-tight text-[#333] text-2xl font-bold flex items-center gap-1">
+                        <span className="text-[#E92348] ">Jebena </span>
                         {"  "}
                         <span
                             className={`${

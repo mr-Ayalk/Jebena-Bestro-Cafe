@@ -67,9 +67,9 @@ const HotDeliciousSection = () => {
     return (
         <section className="py-20 bg-[#F9F9F9]">
             <div className="container mx-auto text-center">
-                <span className="text-[#00A859] font-bold text-sm uppercase tracking-widest block mb-2">
+                <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                     About Our Food
-                </span>
+                </h4>
                 <h2 className="text-4xl font-black text-gray-900 mb-10 font-poppins">
                     Hot Delicious Item
                 </h2>

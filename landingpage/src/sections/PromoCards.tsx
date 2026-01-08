@@ -49,7 +49,7 @@ const PromoCards = () => {
             <div className="container mx-auto px-4 xs:px-6 lg:px-8">
                 {/* Header for the Section */}
                 <div className="text-center mb-12">
-                    <h4 className="text-[#00A859] font-bold text-xs uppercase tracking-[0.2em] mb-2">
+                    <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                         Experience Chamblee&apos;s Finest
                     </h4>
                     <h2 className="text-4xl font-black text-[#1A1A1A] uppercase">
