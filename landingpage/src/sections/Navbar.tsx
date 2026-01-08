@@ -52,17 +52,15 @@ const Navbar = () => {
                         }`}
                     >
                         <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Home <ChevronDown size={16} />
+                            Home
+                        </li>
+                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                            Menu
                         </li>
                         <li className="cursor-pointer hover:text-orange-500 transition-colors">
                             About Us
                         </li>
-                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Shop <ChevronDown size={16} />
-                        </li>
-                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Blog <ChevronDown size={16} />
-                        </li>
+
                         <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
                             Pages <ChevronDown size={16} />
                         </li>

@@ -20,14 +20,20 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 text-white">
-                <div className="max-w-2xl lg:max-w-3xl">
+                <div className="max-w-2xl lg:max-w-4xl">
                     <p className="text-sm font-medium mb-4">
                         Starting at <span className="font-bold">$24.00</span>
                     </p>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
+                    {/* <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
                         The best Food <br />
-                        Collection 2026
+                        Collection 2026  Experiencethe Heart
+of Ethiopia.
+                    </h1> */}
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
+                        Experience the <br />
+                        <span className="text-[#FFC12B]">Heart </span>of
+                        Ethiopia.
                     </h1>
 
                     <div className="mb-10">

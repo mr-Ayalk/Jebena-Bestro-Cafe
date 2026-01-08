@@ -1,7 +1,6 @@
 import React from "react";
-
 import { UtensilsCrossed, Star } from "lucide-react";
-
+import Image from "next/image";
 const AboutFood = () => {
     return (
         <section className="py-16 md:py-24 bg-white overflow-hidden">
@@ -88,9 +87,12 @@ const AboutFood = () => {
                     {/* Right Image Side */}
                     <div className="relative group">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                            <img
-                                src="./images/herobanner.png"
+                            <Image
+                                src="/images/herobanner.png"
                                 alt="Delicious Burgers"
+                                width={800}
+                                height={600}
+                                priority
                                 className="w-full h-auto object-cover"
                             />
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { MoveRight, ShoppingCart } from "lucide-react";
-import Image, { StaticImageData } from "next/image"; // Import Image and the Type
+import { StaticImageData } from "next/image"; // Import Image and the Type
 // UPDATED IMPORT PATH:
 import pizzaimage from "../assets/images/jebenalogo.png";
 

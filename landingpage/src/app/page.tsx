@@ -1,8 +1,8 @@
 import AboutFood from "@/sections/AboutFood";
 import AboutSection from "@/sections/AboutSection";
+import BestSellers from "@/sections/BestSellers";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
-import HotDeliciousSection from "@/sections/HotDeliciousSection";
 import HowWeServe from "@/sections/HowWeServe";
 import Navbar from "@/sections/Navbar";
 import PromoCards from "@/sections/PromoCards";
@@ -16,7 +16,8 @@ export default function Home() {
             <Hero />
             <PromoCards />
             <AboutSection />
-            <HotDeliciousSection />
+            <BestSellers />
+            {/* <HotDeliciousSection /> */}
             <TrendingMenu />
             <AboutFood />
             <HowWeServe />
