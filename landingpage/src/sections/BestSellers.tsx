@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Star, ChevronDown, ChevronUp } from "lucide-react";
+import { Star, ChevronDown } from "lucide-react";
 
 // --- Keep your imports here ---
 import HeroImage from "../app/assets/images/hero.png";
@@ -194,7 +194,7 @@ const BestSellers = () => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
                 >
                     <AnimatePresence mode="popLayout">
-                        {visibleDishes.map((dish, idx) => (
+                        {visibleDishes.map((dish) => (
                             <motion.div
                                 key={dish.id}
                                 layout
