@@ -66,7 +66,7 @@ const Navbar = () => {
                                 Home
                             </li>
                         </Link>
-                        <Link href="/#dishes">
+                        <Link href="/dishes">
                             <li className="flex items-center gap-1 cursor-pointer hover:text-red-400 transition-colors">
                                 Dishes
                             </li>{" "}

@@ -16,22 +16,14 @@ import Gomenbesiga from "../app/assets/images/gomenbesiga.png";
 import Coffee from "../app/assets/images/coffee.png";
 import Assa from "../app/assets/images/assa1.png";
 import Tea from "../app/assets/images/tea.png";
-import Henikin from "../app/assets/images/habeshbear.png";
-
+import Henikin from "../app/assets/images/spageti.png";
+import salad from "../app/assets/images/salad.png";
+import Link from "next/link";
 // 1. DEFINE DATA ARRAY FIRST
 const dishes = [
     {
         id: 1,
-        name: "Doro Wat",
-        image: Dorowot,
-        description:
-            "The most famous Ethiopian dish. Spicy chicken stew simmered in berbere and served with a boiled egg.",
-        ingredients: ["Chicken", "Berbere", "Boiled Egg", "Injera"],
-        tags: ["Spicy", "National Dish"],
-    },
-    {
-        id: 2,
-        name: "Kitfo Special",
+        name: "Especial Kitfo",
         image: KitifoImage,
         description:
             "Finely minced lean beef seasoned with mitmita and niter kibbeh (spiced butter).",
@@ -39,8 +31,8 @@ const dishes = [
         tags: ["Traditional", "Chef's Choice"],
     },
     {
-        id: 3,
-        name: "Shekila Tibs",
+        id: 2,
+        name: "Tibs (Beef or Lamb)",
         image: ShekilaTibis,
         description:
             "Succulent beef or lamb sautéed with onions, rosemary, and jalapeños, served sizzling.",
@@ -48,16 +40,16 @@ const dishes = [
         tags: ["Sizzling", "Popular"],
     },
     {
-        id: 4,
-        name: "Siga Wat",
-        image: Sigawot,
+        id: 3,
+        name: "Fish Tibs",
+        image: Assa,
         description:
-            "Tender beef cubes slow-cooked in a rich, spicy traditional red onion sauce.",
-        ingredients: ["Beef", "Berbere", "Onions", "Spiced Butter"],
-        tags: ["Hearty", "Spicy"],
+            "Fried Tilapia fish cubes sautéed with onions, tomatoes, and spicy berbere.",
+        ingredients: ["Tilapia", "Tomato", "Onion", "Berbere"],
+        tags: ["Seafood", "Spicy"],
     },
     {
-        id: 5,
+        id: 4,
         name: "Miten Shiro",
         image: Shirowot,
         description:
@@ -66,8 +58,8 @@ const dishes = [
         tags: ["Vegan", "High Protein"],
     },
     {
-        id: 6,
-        name: "Veggie Combo",
+        id: 5,
+        name: "Veggie Platters",
         image: Ayinet,
         description:
             "A colorful sampler of Gomen, Misir Wat, and various sautéed plant-based delights.",
@@ -75,7 +67,45 @@ const dishes = [
         tags: ["Healthy", "Vegan"],
     },
     {
+        id: 6,
+        name: "Spaghetti",
+        image: Henikin,
+        description:
+            "Spaghetti served with traditional Ethiopian style sigo/sauce",
+        ingredients: ["Spaghetti", "sigo/sauce"],
+        tags: ["Spaghetti", "Imported"],
+    },
+    {
         id: 7,
+        name: "Tomato Salad / Fit Fit",
+        image: salad,
+        description:
+            "Fresh tomato sliced, onion, jalapeño and home made fresh seasoning dressing.",
+        ingredients: ["tomato sliced", "onion", "jalapeño"],
+        tags: ["Spicy", "National Dish"],
+    },
+    {
+        id: 8,
+        name: "Doro Wat",
+        image: Dorowot,
+        description:
+            "The most famous Ethiopian dish. Spicy chicken stew simmered in berbere and served with a boiled egg.",
+        ingredients: ["Chicken", "Berbere", "Boiled Egg", "Injera"],
+        tags: ["Spicy", "National Dish"],
+    },
+
+    {
+        id: 9,
+        name: "Siga Wat",
+        image: Sigawot,
+        description:
+            "Tender beef cubes slow-cooked in a rich, spicy traditional red onion sauce.",
+        ingredients: ["Beef", "Berbere", "Onions", "Spiced Butter"],
+        tags: ["Hearty", "Spicy"],
+    },
+
+    {
+        id: 10,
         name: "Gomen Besiga",
         image: Gomenbesiga,
         description:
@@ -83,17 +113,9 @@ const dishes = [
         ingredients: ["Collard Greens", "Beef", "Garlic", "Ginger"],
         tags: ["Traditional"],
     },
+
     {
-        id: 8,
-        name: "Assa Tibs",
-        image: Assa,
-        description:
-            "Fried Tilapia fish cubes sautéed with onions, tomatoes, and spicy berbere.",
-        ingredients: ["Tilapia", "Tomato", "Onion", "Berbere"],
-        tags: ["Seafood", "Spicy"],
-    },
-    {
-        id: 9,
+        id: 11,
         name: "Key Wat",
         image: HeroImage,
         description:
@@ -102,7 +124,7 @@ const dishes = [
         tags: ["Spicy"],
     },
     {
-        id: 10,
+        id: 12,
         name: "Traditional Coffee",
         image: Coffee,
         description:
@@ -111,16 +133,16 @@ const dishes = [
         tags: ["Drink", "Tradition"],
     },
     {
-        id: 11,
-        name: "Habesha Beer",
+        id: 13,
+        name: "Spaghetti",
         image: Henikin,
         description:
             "The pride of Ethiopia. A crisp, refreshing lager that pairs perfectly with spicy stews.",
         ingredients: ["Ethiopian Malt", "Hops", "Pure Water"],
-        tags: ["Alcoholic", "Imported"],
+        tags: ["Imported"],
     },
     {
-        id: 12,
+        id: 14,
         name: "Aromatic Tea",
         image: Tea,
         description:
@@ -243,23 +265,17 @@ const BestSellers = () => {
                 </motion.div>
 
                 <div className="flex justify-center mt-12">
-                    <motion.button
-                        layout
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setShowAll(!showAll)}
-                        className="flex items-center gap-2 bg-[#F54748] text-white px-8 py-3 rounded-full font-bold shadow-lg"
-                    >
-                        {showAll ? (
-                            <>
-                                See Less <ChevronUp size={20} />
-                            </>
-                        ) : (
-                            <>
-                                See More Dishes <ChevronDown size={20} />
-                            </>
-                        )}
-                    </motion.button>
+                    <Link href="/dishes">
+                        <motion.button
+                            layout
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => setShowAll(!showAll)}
+                            className="flex items-center gap-2 bg-[#F54748] text-white px-8 py-3 rounded-full font-bold shadow-lg"
+                        >
+                            See More Dishes <ChevronDown size={20} />
+                        </motion.button>
+                    </Link>
                 </div>
             </div>
         </section>
