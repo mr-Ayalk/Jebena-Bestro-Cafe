@@ -185,7 +185,7 @@ const BestSellers = () => {
                                         {dish.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[9px] font-bold uppercase text-[#F54748]"
+                                                className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[9px] font-bold uppercase text-[#E92348]"
                                             >
                                                 {tag}
                                             </span>
