@@ -36,7 +36,7 @@ const Testimonial = () => {
             <div className="container mx-auto px-6">
                 {/* Header Section */}
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <h4 className="text-[#00A859] font-black uppercase tracking-[0.3em] text-xs mb-4">
+                    <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
                         Features
                     </h4>
                     <h2 className="text-4xl md:text-5xl font-black mb-6">

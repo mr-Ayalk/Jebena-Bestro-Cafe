@@ -31,7 +31,7 @@ const HowWeServe = () => {
                         {" "}
                         Food Processing
                     </h4>
-                    <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A] uppercase tracking-tight">
+                    <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A]  tracking-tight">
                         How We Serve You?
                     </h2>
                 </div>

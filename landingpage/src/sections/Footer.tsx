@@ -46,13 +46,13 @@ const Footer = () => {
                                         Opening Hours
                                     </h4>
                                     <p className="text-sm font-bold text-gray-800">
-                                        Tuesday – Saturday
+                                        Tuesday – Sunday
                                     </p>
                                     <p className="text-xl font-black tracking-tight text-gray-900">
-                                        12:00pm – 11:00pm
+                                        11:00 AM - 10:00 PM
                                     </p>
                                     <p className="inline-block mt-2 px-3 py-1 bg-black/5 rounded-full text-[10px] font-black uppercase tracking-widest text-gray-500">
-                                        Closed on Sunday
+                                        Closed on Monday
                                     </p>
                                 </div>
 

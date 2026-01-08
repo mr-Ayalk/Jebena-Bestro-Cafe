@@ -60,7 +60,7 @@ const BeverageMenu = () => {
                         </h4>
                         <h2 className="text-3xl font-black text-gray-900">
                             Jebena{" "}
-                            <span className="text-[#FF6B35]">Drinks</span>
+                            <span className="text-[#FF385C]">Drinks</span>
                         </h2>
                     </div>
                     <p className="text-gray-400 text-xs font-bold max-w-[200px] md:text-right leading-relaxed">
@@ -72,7 +72,7 @@ const BeverageMenu = () => {
                     {/* Hot Drinks Column */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-3 pb-4 border-b-2 border-gray-900/5">
-                            <Coffee className="text-[#FF6B35]" size={20} />
+                            <Coffee className="text-[#FF385C]" size={20} />
                             <h3 className="font-black text-sm uppercase tracking-widest text-gray-900">
                                 Hot Brews
                             </h3>
@@ -83,7 +83,7 @@ const BeverageMenu = () => {
                                 className="group flex justify-between items-start"
                             >
                                 <div className="space-y-1">
-                                    <h4 className="font-black text-gray-800 text-sm group-hover:text-[#FF6B35] transition-colors uppercase tracking-tight">
+                                    <h4 className="font-black text-gray-800 text-sm group-hover:text-[#ff385dd2] transition-colors uppercase tracking-tight">
                                         {item.name}
                                     </h4>
                                     <p className="text-[11px] text-gray-400 font-bold leading-tight max-w-[240px]">
@@ -118,7 +118,7 @@ const BeverageMenu = () => {
                                         {item.detail}
                                     </p>
                                 </div>
-                                <span className="text-[#FF6B35] font-black text-sm">
+                                <span className="text-[#FF385C] font-black text-sm">
                                     {item.price}
                                 </span>
                             </div>
@@ -136,7 +136,7 @@ const BeverageMenu = () => {
                     </div>
                     <div className="w-1 h-1 bg-gray-200 rounded-full"></div>
                     <div className="flex items-center gap-2">
-                        <Coffee size={14} className="text-[#FF6B35]" />
+                        <Coffee size={14} className="text-[#FF385C]" />
                         <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
                             Traditional Roast
                         </span>

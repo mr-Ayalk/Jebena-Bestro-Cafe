@@ -66,7 +66,7 @@ const TrendingMenu = () => {
                                         {item.name}
                                     </h3>
                                     <div className="flex-grow mx-4 border-b border-dotted border-gray-300 mb-1 opacity-50"></div>
-                                    <span className="text-[#FFB800] font-black text-xl">
+                                    <span className="text-[#FF385C] font-black text-xl">
                                         {item.price}
                                     </span>
                                 </div>

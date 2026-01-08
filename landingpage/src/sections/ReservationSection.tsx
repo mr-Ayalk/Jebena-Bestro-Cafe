@@ -28,7 +28,7 @@ const ReservationSection = () => {
                             </div>
                             <h2 className="text-3xl font-black text-gray-900 mb-8">
                                 Book Your{" "}
-                                <span className="text-[#FF6B35]">
+                                <span className="text-[#FF385C]">
                                     Experience
                                 </span>
                             </h2>
@@ -41,14 +41,14 @@ const ReservationSection = () => {
                                     <input
                                         type="text"
                                         placeholder="Full Name"
-                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF6B35] outline-none transition-all text-sm font-bold"
+                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF385C] outline-none transition-all text-sm font-bold"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
                                     <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-1">
                                         Guests
                                     </label>
-                                    <select className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF6B35] outline-none transition-all text-sm font-bold appearance-none cursor-pointer">
+                                    <select className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF385C] outline-none transition-all text-sm font-bold appearance-none cursor-pointer">
                                         <option>2 People</option>
                                         <option>4 People</option>
                                         <option>6+ People</option>
@@ -60,7 +60,7 @@ const ReservationSection = () => {
                                     </label>
                                     <input
                                         type="date"
-                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF6B35] outline-none transition-all text-sm font-bold"
+                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF385C] outline-none transition-all text-sm font-bold"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
@@ -69,13 +69,13 @@ const ReservationSection = () => {
                                     </label>
                                     <input
                                         type="time"
-                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF6B35] outline-none transition-all text-sm font-bold"
+                                        className="w-full px-0 py-2 bg-transparent border-b-2 border-gray-100 focus:border-[#FF385C] outline-none transition-all text-sm font-bold"
                                     />
                                 </div>
                             </div>
                         </div>
 
-                        <button className="w-full mt-10 bg-[#FF385C] text-white py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#FF6B35] transition-all group active:scale-[0.98]">
+                        <button className="w-full mt-10 bg-[#FF385C] text-white py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#ff385dce] transition-all group active:scale-[0.98]">
                             Confirm Table
                             <ArrowRight
                                 size={16}
@@ -89,7 +89,7 @@ const ReservationSection = () => {
                         {/* Address & Phone Branding */}
                         <div className="mb-6 space-y-4">
                             <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-[#FF6B35]">
+                                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-[#FF385C]">
                                     <MapPin size={18} />
                                 </div>
                                 <p className="text-xs font-bold text-gray-600 leading-snug">
