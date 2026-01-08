@@ -1,10 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { ShoppingCart, Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, Globe } from "lucide-react";
 import Image from "next/image";
 import Logo from "../assets/images/jebenalogo.png";
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isLangOpen, setIsLangOpen] = useState(false);
+    const [currentLang, setCurrentLang] = useState("English");
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
@@ -12,6 +17,11 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const languages = [
+        { name: "English", code: "EN" },
+        { name: "Amharic", code: "AM" },
+    ];
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-500 ${
@@ -69,23 +79,69 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
+                {/* Action Buttons & Language Switcher */}
+                <div className="flex items-center gap-6">
+                    {/* Language Dropdown (Desktop) */}
+                    <div className="relative hidden md:block">
+                        <button
+                            onClick={() => setIsLangOpen(!isLangOpen)}
+                            className={`flex items-center gap-1.5 font-bold text-xs uppercase transition-all ${
+                                isScrolled ? "text-gray-800" : "text-white"
+                            }`}
+                        >
+                            <Globe size={16} className="text-[#FFA500]" />
+                            {currentLang}
+                            <ChevronDown
+                                size={14}
+                                className={`transition-transform duration-300 ${
+                                    isLangOpen ? "rotate-180" : ""
+                                }`}
+                            />
+                        </button>
 
-                {/* Action Buttons */}
-                <div className="flex items-center gap-4">
-                    <div className="relative cursor-pointer p-2">
-                        <ShoppingCart className="text-gray-700" size={24} />
-                        <span className="absolute top-0 right-0 bg-[#E92348] text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">
-                            0
-                        </span>
+                        <AnimatePresence>
+                            {isLangOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    className="absolute top-full right-0 mt-3 bg-white shadow-2xl rounded-xl border border-gray-100 overflow-hidden min-w-[120px]"
+                                >
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setCurrentLang(lang.name);
+                                                setIsLangOpen(false);
+                                            }}
+                                            className="w-full text-left px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                                        >
+                                            {lang.name}
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
 
-                    <button className="hidden md:block bg-[#FFC12B] hover:bg-[#eab308] text-white px-8 py-3 rounded-lg font-semibold transition-all shadow-sm">
-                        Contact Us
-                    </button>
+                    {/* Login Button (Desktop) */}
+                    <Link href="/registration">
+                        <button className="hidden md:block bg-[#FFA500] hover:bg-orange-600 text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            Login
+                        </button>
+                    </Link>
 
                     {/* Mobile Menu Toggle */}
-                    <button className="lg:hidden p-2 text-gray-700">
-                        <Menu size={28} />
+                    <button
+                        className="lg:hidden"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        <Menu
+                            className={
+                                isScrolled ? "text-gray-900" : "text-white"
+                            }
+                            size={28}
+                        />
                     </button>
                 </div>
             </div>

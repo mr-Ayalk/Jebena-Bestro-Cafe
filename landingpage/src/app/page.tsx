@@ -1,5 +1,6 @@
 import AboutFood from "@/sections/AboutFood";
 import AboutSection from "@/sections/AboutSection";
+import BestOffer from "@/sections/BestOffer";
 import BestSellers from "@/sections/BestSellers";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
@@ -15,10 +16,12 @@ export default function Home() {
             <Navbar />
             <Hero />
             <PromoCards />
-            <AboutSection />
+
             <BestSellers />
+            <AboutSection />
             {/* <HotDeliciousSection /> */}
             <TrendingMenu />
+            <BestOffer />
             <AboutFood />
             <HowWeServe />
             <Testimonial />
