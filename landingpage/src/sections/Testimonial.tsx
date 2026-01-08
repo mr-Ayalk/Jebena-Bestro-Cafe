@@ -4,7 +4,16 @@ import React, { useState } from "react";
 import { Quote, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const testimonials = [
+// 1. Define the shape of our data for TypeScript
+interface TestimonialItem {
+    id: number;
+    text: string;
+    author: string;
+    role: string;
+    color: string;
+}
+
+const testimonials: TestimonialItem[] = [
     {
         id: 1,
         text: "The aroma of the roasting coffee beans hit me the moment I walked in. The Doro Wat was perfectly spiced, and the Injera was so fresh. It feels like home.",
@@ -37,7 +46,6 @@ const Testimonial = () => {
             id="testimonials"
         >
             <div className="container mx-auto px-4 sm:px-6">
-                {/* Header Section */}
                 <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
                     <motion.h4
                         initial={{ opacity: 0 }}
@@ -56,15 +64,12 @@ const Testimonial = () => {
                     <p className="text-gray-500 text-sm md:text-base leading-relaxed px-4">
                         Experience the authentic heart of Ethiopia through our
                         traditional spices, hand-rolled injera, and warm
-                        hospitality that makes every guest feel like family.
+                        hospitality.
                     </p>
                 </div>
 
-                {/* Cards Grid / Mobile Carousel */}
                 <div className="relative mb-12">
-                    {/* On Desktop (md+): Show 3 columns
-                        On Mobile: Show only the active index with a fade transition
-                    */}
+                    {/* Desktop Grid */}
                     <div className="hidden md:grid grid-cols-3 gap-8">
                         {testimonials.map((item, index) => (
                             <TestimonialCard
@@ -75,6 +80,7 @@ const Testimonial = () => {
                         ))}
                     </div>
 
+                    {/* Mobile Carousel */}
                     <div className="md:hidden flex justify-center">
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -94,7 +100,7 @@ const Testimonial = () => {
                     </div>
                 </div>
 
-                {/* Pagination Dots - Functional for both mobile and desktop focus */}
+                {/* Pagination */}
                 <div className="flex justify-center gap-4">
                     {testimonials.map((_, i) => (
                         <button
@@ -114,8 +120,13 @@ const Testimonial = () => {
     );
 };
 
-// Extracted Card Component for cleaner code
-const TestimonialCard = ({ item, index }) => (
+// 2. Add Type Annotations to the Card Component props
+interface CardProps {
+    item: TestimonialItem;
+    index: number;
+}
+
+const TestimonialCard = ({ item, index }: CardProps) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -123,11 +134,7 @@ const TestimonialCard = ({ item, index }) => (
         transition={{ delay: index * 0.1 }}
         className="relative bg-[#FFFAF7] rounded-[2.5rem] p-8 md:p-10 border border-orange-50/50 shadow-sm hover:shadow-xl transition-all duration-500 group"
     >
-        {/* Floating Quote Icon */}
-        <div
-            className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg rotate-3 group-hover:rotate-0 transition-transform duration-300"
-            style={{ backgroundColor: "#fff" }}
-        >
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg rotate-3 group-hover:rotate-0 transition-transform duration-300 bg-white">
             <Quote
                 size={22}
                 style={{ color: item.color }}
@@ -141,7 +148,6 @@ const TestimonialCard = ({ item, index }) => (
                 &quot;{item.text}&quot;
             </p>
 
-            {/* Stars */}
             <div className="flex justify-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
                     <Star
@@ -149,7 +155,6 @@ const TestimonialCard = ({ item, index }) => (
                         size={16}
                         fill={item.color}
                         style={{ color: item.color }}
-                        className="border-none"
                     />
                 ))}
             </div>
