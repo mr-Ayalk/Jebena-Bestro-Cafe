@@ -49,7 +49,7 @@ const TrendingMenu = () => {
             <div className="container mx-auto px-4 xs:px-6">
                 <div className="text-center mb-16">
                     <h4 className="text-[#00A859] font-serif italic text-2xl mb-4">
-                        Experience Chamblee's Finest
+                        Experience Chamblee&apos;s Finest
                     </h4>
                     <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A] tracking-tight">
                         Authentic{" "}
