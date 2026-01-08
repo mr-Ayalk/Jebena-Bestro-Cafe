@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Star, ChevronDown, ChevronUp } from "lucide-react";
+
+// --- Keep your imports here ---
 import HeroImage from "../app/assets/images/hero.png";
 import KitifoImage from "../app/assets/images/kitifo.png";
 import ShekilaTibis from "../app/assets/images/shekilatibis.png";
@@ -15,6 +17,8 @@ import Coffee from "../app/assets/images/coffee.png";
 import Assa from "../app/assets/images/assa1.png";
 import Tea from "../app/assets/images/tea.png";
 import Henikin from "../app/assets/images/habeshbear.png";
+
+// 1. DEFINE DATA ARRAY FIRST
 const dishes = [
     {
         id: 1,
@@ -97,7 +101,6 @@ const dishes = [
         ingredients: ["Beef", "Berbere", "Injera"],
         tags: ["Spicy"],
     },
-
     {
         id: 10,
         name: "Traditional Coffee",
@@ -116,7 +119,6 @@ const dishes = [
         ingredients: ["Ethiopian Malt", "Hops", "Pure Water"],
         tags: ["Alcoholic", "Imported"],
     },
-
     {
         id: 12,
         name: "Aromatic Tea",
@@ -128,33 +130,44 @@ const dishes = [
     },
 ];
 
+// 2. COMPONENT LOGIC
 const BestSellers = () => {
     const [showAll, setShowAll] = useState(false);
-
-    // Logic to show either 8 or all items
     const visibleDishes = showAll ? dishes : dishes.slice(0, 8);
 
+    const headerVariants: Variants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    };
+
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+    };
+
     return (
-        <section className="bg-[#FEF9F2] py-20 overflow-hidden" id="dishes">
+        <section className="bg-[#FEF9F2] py-24 overflow-hidden" id="dishes">
             <div className="container mx-auto px-4">
-                {/* Header */}
-                <div className="text-center max-w-2xl mx-auto mb-16">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={headerVariants}
+                    className="text-center max-w-2xl mx-auto mb-16"
+                >
                     <h2 className="text-4xl md:text-5xl font-bold font-poppins text-[#333] mb-4">
-                        <span className="text-[#00A859] font-serif  italic text-2xl mb-4">
+                        <span className="text-[#00A859] font-serif italic text-2xl block mb-2">
                             Explore
                         </span>
-                        <br />
                         Our Best Dishes
                     </h2>
-                    <p className="text-[#666] font-sans leading-relaxed">
-                        Experience the authentic soul of Ethiopia. Each dish is
-                        prepared using traditional techniques and spices sourced
-                        directly from the Ethiopian highlands.
-                    </p>
-                </div>
+                </motion.div>
 
-                {/* Grid */}
                 <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
                     layout
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
                 >
@@ -165,20 +178,16 @@ const BestSellers = () => {
                                 layout
                                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                                exit={{
-                                    opacity: 0,
-                                    scale: 0.9,
-                                    transition: { duration: 0.2 },
-                                }}
+                                exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{
-                                    duration: 0.4,
-                                    delay: idx * 0.05,
+                                    type: "spring",
+                                    stiffness: 200,
+                                    damping: 20,
                                 }}
                                 whileHover={{ y: -10 }}
-                                className="bg-white rounded-[30px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col h-full"
+                                className="bg-white rounded-[30px] overflow-hidden shadow-sm border border-gray-50 flex flex-col h-full group"
                             >
-                                {/* Dish Image */}
-                                <div className="relative aspect-square w-full group">
+                                <div className="relative aspect-square overflow-hidden">
                                     <Image
                                         src={dish.image}
                                         alt={dish.name}
@@ -197,10 +206,9 @@ const BestSellers = () => {
                                     </div>
                                 </div>
 
-                                {/* Dish Details */}
                                 <div className="p-6 flex flex-col flex-grow">
                                     <div className="flex justify-between items-center mb-2">
-                                        <h3 className="text-xl font-bold font-poppins text-[#333]">
+                                        <h3 className="text-xl font-bold text-[#333]">
                                             {dish.name}
                                         </h3>
                                         <div className="flex items-center text-yellow-400">
@@ -213,24 +221,20 @@ const BestSellers = () => {
                                             </span>
                                         </div>
                                     </div>
-
-                                    <p className="text-gray-500 text-xs mb-4 leading-relaxed line-clamp-2 italic">
+                                    <p className="text-gray-500 text-xs mb-4 italic line-clamp-2">
                                         &quot;{dish.description}&quot;
                                     </p>
-
-                                    <div className="mt-auto">
-                                        <div className="flex flex-wrap gap-1">
-                                            {dish.ingredients
-                                                .slice(0, 3)
-                                                .map((ing) => (
-                                                    <span
-                                                        key={ing}
-                                                        className="bg-gray-50 text-gray-500 px-2 py-0.5 rounded-md text-[10px] font-medium border border-gray-100"
-                                                    >
-                                                        {ing}
-                                                    </span>
-                                                ))}
-                                        </div>
+                                    <div className="mt-auto flex flex-wrap gap-1">
+                                        {dish.ingredients
+                                            .slice(0, 3)
+                                            .map((ing) => (
+                                                <span
+                                                    key={ing}
+                                                    className="bg-gray-50 text-gray-400 px-2 py-0.5 rounded text-[10px] border border-gray-100"
+                                                >
+                                                    {ing}
+                                                </span>
+                                            ))}
                                     </div>
                                 </div>
                             </motion.div>
@@ -238,14 +242,13 @@ const BestSellers = () => {
                     </AnimatePresence>
                 </motion.div>
 
-                {/* Toggle Button Container */}
                 <div className="flex justify-center mt-12">
                     <motion.button
                         layout
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setShowAll(!showAll)}
-                        className="flex items-center gap-2 bg-[#F54748] text-white px-8 py-3 rounded-full font-bold hover:bg-[#d43d3e] transition-all shadow-lg hover:shadow-red-200"
+                        className="flex items-center gap-2 bg-[#F54748] text-white px-8 py-3 rounded-full font-bold shadow-lg"
                     >
                         {showAll ? (
                             <>

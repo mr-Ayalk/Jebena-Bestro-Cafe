@@ -3,7 +3,7 @@ import { UtensilsCrossed, Star } from "lucide-react";
 import Image from "next/image";
 const AboutFood = () => {
     return (
-        <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <section className="py-16 md:py-24 bg-white overflow-hidden" id="about-us">
             <div className="container mx-auto px-4 xs:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content Side */}
