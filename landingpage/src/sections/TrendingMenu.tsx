@@ -45,7 +45,7 @@ const menuItems = [
 
 const TrendingMenu = () => {
     return (
-        <section className="py-20 bg-white" id="menu">
+        <section className="py-24 bg-white" id="menu">
             <div className="container mx-auto px-4 xs:px-6">
                 <div className="text-center mb-16">
                     <h4 className="text-[#00A859] font-serif italic text-2xl mb-4">

@@ -12,7 +12,7 @@ import {
 const ReservationSection = () => {
     return (
         /* Reduced height to ensure it fits on screen without scrolling (h-[80vh]) */
-        <section className="relative w-full h-[80vh] min-h-[550px] bg-[#FDFDFD] flex items-center justify-center py-4 font-sans">
+        <section className="pt-24 relative w-full h-[80vh] min-h-[550px] bg-[#FDFDFD] flex items-center justify-center py-4 font-sans">
             <div className="container mx-auto px-4 lg:px-12 h-full max-w-6xl">
                 {/* Unified Slim Container */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 bg-white rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07)] border border-gray-100 overflow-hidden h-full max-h-[550px]">

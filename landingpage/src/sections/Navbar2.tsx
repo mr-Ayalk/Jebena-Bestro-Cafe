@@ -5,7 +5,7 @@ import Image from "next/image";
 import Logo from "../assets/images/jebenalogo.png";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-const Navbar = () => {
+const Navbar2 = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [currentLang, setCurrentLang] = useState("English");
@@ -27,7 +27,7 @@ const Navbar = () => {
             className={`fixed top-0 w-full z-50 transition-all duration-500 ${
                 isScrolled
                     ? "bg-white backdrop-blur-md shadow-lg "
-                    : "bg-transparent "
+                    : "bg-white backdrop-blur-md shadow-lg  "
             }`}
         >
             <div className="container flex items-center justify-between h-20">
@@ -46,7 +46,7 @@ const Navbar = () => {
                         {"  "}
                         <span
                             className={`${
-                                isScrolled ? "text-black" : "text-white"
+                                isScrolled ? "text-black" : "text-black"
                             }`}
                         >
                             Bestro
@@ -58,7 +58,7 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center gap-8">
                     <ul
                         className={`flex items-center gap-6 font-medium text-gray-700  ${
-                            isScrolled ? "text-black" : "text-white"
+                            isScrolled ? "text-black" : "text-black"
                         }`}
                     >
                         <Link href="/">
@@ -98,7 +98,7 @@ const Navbar = () => {
                         <button
                             onClick={() => setIsLangOpen(!isLangOpen)}
                             className={`flex items-center gap-1.5 font-bold text-xs uppercase transition-all ${
-                                isScrolled ? "text-gray-800" : "text-white"
+                                isScrolled ? "text-gray-800" : "text-gray-800"
                             }`}
                         >
                             <Globe size={16} className="text-[#FF385C]" />
@@ -150,7 +150,7 @@ const Navbar = () => {
                     >
                         <Menu
                             className={
-                                isScrolled ? "text-gray-900" : "text-white"
+                                isScrolled ? "text-gray-900" : "text-gray-900"
                             }
                             size={28}
                         />
@@ -161,6 +161,6 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar2;
 
 //       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">

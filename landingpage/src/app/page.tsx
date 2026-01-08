@@ -2,6 +2,7 @@ import AboutFood from "@/sections/AboutFood";
 import AboutSection from "@/sections/AboutSection";
 import BestSellers from "@/sections/BestSellers";
 import BeverageMenu from "@/sections/BeverageMenu";
+
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import HowWeServe from "@/sections/HowWeServe";
