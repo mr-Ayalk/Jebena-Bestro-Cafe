@@ -61,22 +61,34 @@ const Navbar = () => {
                             isScrolled ? "text-black" : "text-white"
                         }`}
                     >
-                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Home
-                        </li>
-                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Menu
-                        </li>
-                        <li className="cursor-pointer hover:text-orange-500 transition-colors">
-                            About Us
-                        </li>
+                        <Link href="/">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                                Home
+                            </li>
+                        </Link>
+                        <Link href="/#dishes">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                                Dishes
+                            </li>{" "}
+                        </Link>
 
-                        <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
-                            Pages <ChevronDown size={16} />
-                        </li>
-                        <li className="cursor-pointer hover:text-orange-500 transition-colors">
-                            Contact
-                        </li>
+                        <Link href="/#menu">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                                Menu
+                            </li>
+                        </Link>
+                        <Link href="/#about-us">
+                            {" "}
+                            <li className="cursor-pointer hover:text-orange-500 transition-colors">
+                                About Us
+                            </li>
+                        </Link>
+                        <Link href="/#contact-us">
+                            {" "}
+                            <li className="cursor-pointer hover:text-orange-500 transition-colors">
+                                Contact
+                            </li>
+                        </Link>
                     </ul>
                 </div>
                 {/* Action Buttons & Language Switcher */}
@@ -127,7 +139,7 @@ const Navbar = () => {
                     {/* Login Button (Desktop) */}
                     <Link href="/registration">
                         <button className="hidden md:block bg-[#FFA500] hover:bg-orange-600 text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
-                            Login
+                            Book A Table
                         </button>
                     </Link>
 

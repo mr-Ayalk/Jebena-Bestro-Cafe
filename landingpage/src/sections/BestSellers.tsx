@@ -135,7 +135,7 @@ const BestSellers = () => {
     const visibleDishes = showAll ? dishes : dishes.slice(0, 8);
 
     return (
-        <section className="bg-[#FEF9F2] py-20 overflow-hidden" id="Foods">
+        <section className="bg-[#FEF9F2] py-20 overflow-hidden" id="dishes">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16">

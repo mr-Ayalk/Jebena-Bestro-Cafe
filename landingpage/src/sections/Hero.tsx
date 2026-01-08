@@ -22,7 +22,10 @@ const Hero = () => {
             <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 text-white">
                 <div className="max-w-2xl lg:max-w-4xl">
                     <p className="text-sm font-medium mb-4">
-                        Starting at <span className="font-bold">$24.00</span>
+                        AUTHENTIC{" "}
+                        <span className="font-bold text-[#FFC12B]">
+                            FLAVORS
+                        </span>
                     </p>
 
                     {/* <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
@@ -38,11 +41,11 @@ of Ethiopia.
 
                     <div className="mb-10">
                         <span className="text-gray-600 text-lg">
-                            Exclusive offer{" "}
-                            <span className="text-[#FFC12B] underline">
-                                -35% off
+                            Freshly prepared{" "}
+                            <span className="text-[#E92348] underline">
+                                traditional dishes
                             </span>{" "}
-                            this week
+                            every day
                         </span>
                     </div>
 
@@ -70,9 +73,9 @@ of Ethiopia.
                 <div className="absolute top-1/2 right-10 hidden lg:block -translate-y-1/2">
                     <div className="bg-[#E92348] px-12 py-6 rounded-full rotate-[-5deg] shadow-2xl">
                         <div className="border-2 border-dashed border-white/40 p-4 rounded-full text-white text-center">
-                            <span className="text-xs uppercase">Upto</span>
-                            <div className="text-4xl font-bold">20%</div>
-                            <span className="text-xs uppercase">Discount</span>
+                            <span className="text-xs uppercase">MADE</span>
+                            <div className="text-4xl font-bold">WITH</div>
+                            <span className="text-xs uppercase"> LOVE</span>
                         </div>
                     </div>
                 </div>
