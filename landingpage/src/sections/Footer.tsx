@@ -175,7 +175,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-10 border-t border-gray-100">
+                <div className="pt-10 border-t-2 border-gray-100">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                         <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">
                             © 2026{" "}

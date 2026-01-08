@@ -143,6 +143,7 @@ const BestSellers = () => {
                         <span className="text-[#00A859] font-serif  italic text-2xl mb-4">
                             Explore
                         </span>
+                        <br />
                         Our Best Dishes
                     </h2>
                     <p className="text-[#666] font-sans leading-relaxed">

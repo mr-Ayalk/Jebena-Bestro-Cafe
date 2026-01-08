@@ -62,30 +62,30 @@ const Navbar = () => {
                         }`}
                     >
                         <Link href="/">
-                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-red-400 transition-colors">
                                 Home
                             </li>
                         </Link>
                         <Link href="/#dishes">
-                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-red-400 transition-colors">
                                 Dishes
                             </li>{" "}
                         </Link>
 
                         <Link href="/#menu">
-                            <li className="flex items-center gap-1 cursor-pointer hover:text-orange-500 transition-colors">
+                            <li className="flex items-center gap-1 cursor-pointer hover:text-red-400 transition-colors">
                                 Menu
                             </li>
                         </Link>
                         <Link href="/#about-us">
                             {" "}
-                            <li className="cursor-pointer hover:text-orange-500 transition-colors">
+                            <li className="cursor-pointer hover:text-red-400 transition-colors">
                                 About Us
                             </li>
                         </Link>
                         <Link href="/#contact-us">
                             {" "}
-                            <li className="cursor-pointer hover:text-orange-500 transition-colors">
+                            <li className="cursor-pointer hover:text-red-400 transition-colors">
                                 Contact
                             </li>
                         </Link>
@@ -126,7 +126,7 @@ const Navbar = () => {
                                                 setCurrentLang(lang.name);
                                                 setIsLangOpen(false);
                                             }}
-                                            className="w-full text-left px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                                            className="w-full text-left px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-red-400  transition-colors"
                                         >
                                             {lang.name}
                                         </button>
@@ -138,7 +138,7 @@ const Navbar = () => {
 
                     {/* Login Button (Desktop) */}
                     <Link href="/registration">
-                        <button className="hidden md:block bg-[#FF385C] hover:bg-orange-600 text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                        <button className="hidden md:block bg-[#FF385C] hover:bg-red-400  text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
                             Book A Table
                         </button>
                     </Link>

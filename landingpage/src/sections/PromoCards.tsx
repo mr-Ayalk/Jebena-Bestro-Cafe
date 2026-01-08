@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { MoveRight, Utensils } from "lucide-react";
 import { StaticImageData } from "next/image";
-// Ensure these assets exist or replace with your relevant Ethiopian food images
+import { motion, Variants } from "framer-motion";
+// Ensure these assets exist
 import doroWatImg from "../assets/images/jebenalogo.png";
 import meatPlatterImg from "../assets/images/jebenalogo.png";
 import veggieImg from "../assets/images/jebenalogo.png";
@@ -21,7 +24,7 @@ const cards: PromoCard[] = [
         title: "Traditional Doro Wat",
         subtitle: "Spiced to Perfection",
         badge: "AUTHENTIC SPICES",
-        bgClass: "bg-[#1a1a1a]", // Black background for a premium look
+        bgClass: "bg-[#1a1a1a]",
         image: doroWatImg,
         buttonType: "link",
     },
@@ -29,7 +32,7 @@ const cards: PromoCard[] = [
         title: "Signature Meat Platter",
         subtitle: "Chef's Special",
         description: "Freshly Prepared Kitfo & Tibs",
-        bgClass: "bg-[#ff6b00]", // Vibrant orange matching Ethiopian warmth
+        bgClass: "bg-[#ff6b00]",
         image: meatPlatterImg,
         buttonType: "button",
     },
@@ -37,43 +40,88 @@ const cards: PromoCard[] = [
         title: "Vegetarian Combo",
         subtitle: "Healthy & Flavorful",
         badge: "MADE WITH LOVE",
-        bgClass: "bg-[#4a0404]", // Deep maroon reflecting traditional Berbere
+        bgClass: "bg-[#4a0404]",
         image: veggieImg,
         buttonType: "link",
     },
 ];
 
-const PromoCards = () => {
+// Animation Variants
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2, // Time between each card appearing
+        },
+    },
+};
+
+const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+
+const PromoCards: React.FC = () => {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 xs:px-6 lg:px-8">
-                {/* Header for the Section */}
-                <div className="text-center mb-12">
-                    <h4 className="text-[#00A859] font-serif  italic text-2xl mb-4">
+                
+                {/* Header Animation */}
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.7 }}
+                    className="text-center mb-16"
+                >
+                    <h4 className="text-[#00A859] font-serif italic text-2xl mb-4">
                         Experience Chamblee&apos;s Finest
                     </h4>
-                    <h2 className="text-4xl font-black text-[#1A1A1A] uppercase">
+                    <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A] uppercase tracking-tight">
                         Taste of Ethiopia
                     </h2>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Cards Grid */}
+                <motion.div 
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {cards.map((card, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className={`${card.bgClass} rounded-2xl overflow-hidden relative min-h-[340px] p-8 flex flex-col justify-center group transition-transform duration-300 hover:-translate-y-2 shadow-xl`}
+                            variants={cardVariants}
+                            whileHover={{ 
+                                y: -10,
+                                transition: { duration: 0.3 }
+                            }}
+                            className={`${card.bgClass} rounded-3xl overflow-hidden relative min-h-[360px] p-8 flex flex-col justify-center shadow-2xl group`}
                         >
                             {/* Content Layer */}
                             <div className="relative z-30 w-full sm:w-3/5">
-                                <span className="text-[#FFC12B] font-bold text-sm uppercase tracking-wider block mb-2">
+                                <motion.span 
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: 0.5 + index * 0.1 }}
+                                    className="text-[#FFC12B] font-bold text-sm uppercase tracking-wider block mb-2"
+                                >
                                     {card.subtitle}
-                                </span>
+                                </motion.span>
+                                
                                 <h3 className="text-white text-3xl font-bold leading-tight mb-4">
                                     {card.title}
                                 </h3>
 
                                 {card.description && (
-                                    <p className="text-white/80 text-sm mb-4 font-medium italic">
+                                    <p className="text-white/80 text-sm mb-6 font-medium italic leading-relaxed">
                                         {card.description}
                                     </p>
                                 )}
@@ -83,32 +131,47 @@ const PromoCards = () => {
                                         View Details
                                         <MoveRight
                                             size={18}
-                                            className="group-hover/btn:translate-x-1 transition-transform"
+                                            className="group-hover/btn:translate-x-2 transition-transform"
                                         />
                                     </button>
                                 ) : (
-                                    <button className="bg-[#FFC12B] text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg active:scale-95">
+                                    <motion.button 
+                                        whileTap={{ scale: 0.95 }}
+                                        className="bg-[#FFC12B] text-black px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg"
+                                    >
                                         <Utensils size={18} /> Order Now
-                                    </button>
+                                    </motion.button>
                                 )}
                             </div>
 
-                            {/* Decorative Badge (Replaces Discount Circles) */}
+                            {/* Badge Animation */}
                             {card.badge && (
-                                <div className="absolute top-6 right-6 border-2 border-dashed border-white/30 rounded-full w-24 h-24 flex items-center justify-center -rotate-12 z-10 bg-black/10 backdrop-blur-sm">
+                                <motion.div 
+                                    initial={{ scale: 0, rotate: 15 }}
+                                    whileInView={{ scale: 1, rotate: -12 }}
+                                    transition={{ 
+                                        type: "spring", 
+                                        stiffness: 200, 
+                                        delay: 0.6 + index * 0.1 
+                                    }}
+                                    className="absolute top-6 right-6 border-2 border-dashed border-white/30 rounded-full w-24 h-24 flex items-center justify-center z-10 bg-black/10 backdrop-blur-sm"
+                                >
                                     <span className="text-white text-[10px] font-black text-center leading-tight uppercase px-2">
                                         {card.badge}
                                     </span>
-                                </div>
+                                </motion.div>
                             )}
 
-                            {/* Background Contact Info (Subtle Brand Reinforcement) */}
-                            <div className="absolute bottom-4 right-6 opacity-10 text-white text-[10px] font-mono hidden group-hover:block transition-opacity">
+                            {/* Hover info effect */}
+                            <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-40 text-white text-[10px] font-mono transition-opacity duration-300">
                                 3654 Clairmont Rd
                             </div>
-                        </div>
+                            
+                            {/* Subtle Background Glow on Hover */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
