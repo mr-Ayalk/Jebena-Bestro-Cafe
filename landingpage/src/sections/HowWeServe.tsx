@@ -23,7 +23,7 @@ const HowWeServe = () => {
     ];
 
     return (
-        <section className="py-20 bg-[#F7F5EE]">
+        <section className="py-20 bg-[#FEF9F2]">
             <div className="container mx-auto px-4 xs:px-6">
                 {/* Header */}
                 <div className="text-center mb-16">

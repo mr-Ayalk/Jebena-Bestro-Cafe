@@ -8,7 +8,7 @@ const AboutFood = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content Side */}
                     <div className="space-y-6">
-                        <h4 className="text-[#FF385C] font-semibold text-sm tracking-wide uppercase">
+                        <h4 className="text-[#00A859] font-semibold text-sm tracking-wide uppercase">
                             About Our Food
                         </h4>
 
@@ -86,24 +86,16 @@ const AboutFood = () => {
 
                     {/* Right Image Side */}
                     <div className="relative group">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative rounded-3xl overflow-hidden ">
                             <Image
                                 src="/images/herobanner.png"
                                 alt="Delicious Burgers"
                                 width={800}
                                 height={600}
                                 priority
-                                className="w-full h-auto object-cover"
+                                className="w-full h-full object-cover rounded-lg"
                             />
-
-                            {/* Since 1985 Badge */}
-                            <div className="absolute bottom-10 right-10 bg-[#00A859] text-white px-6 py-2 rounded-md transform -rotate-12 shadow-lg font-bold text-xl">
-                                Since /1985
-                            </div>
                         </div>
-
-                        {/* Background Decorative Element (optional) */}
-                        <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gray-100 rounded-3xl" />
                     </div>
                 </div>
             </div>

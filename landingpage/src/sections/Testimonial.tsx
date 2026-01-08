@@ -57,7 +57,7 @@ const Testimonial = () => {
                         <p className="font-bold text-[#1A1A1A]">
                             Customer
                             <span className="text-gray-400 font-normal ml-2">
-                                - From Envato
+                                - From Kiros H.
                             </span>
                         </p>
 
