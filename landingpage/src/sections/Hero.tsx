@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }, // Smooth custom ease
+            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
         },
     };
 
@@ -41,11 +41,11 @@ const Hero: React.FC = () => {
             />
 
             {/* Overlay to ensure contrast */}
-            <div className="absolute inset-0 bg-black/40 z-[1]" />
+            <div className="absolute inset-0 bg-black/50 z-[1]" />
 
             {/* Content */}
             <motion.div
-                className="relative z-10 container mx-auto px-4 flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 text-white"
+                className="relative z-10 container mx-auto px-4 xs:px-6 flex flex-col justify-center min-h-[calc(100vh-80px)] py-12 text-white"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                 <div className="max-w-2xl lg:max-w-4xl">
                     <motion.p
                         variants={itemVariants}
-                        className="text-sm font-medium mb-4 tracking-widest"
+                        className="text-xs xs:text-sm font-medium mb-4 tracking-[0.2em] xs:tracking-widest uppercase"
                     >
                         AUTHENTIC{" "}
                         <span className="font-bold text-[#00A859]">
@@ -63,15 +63,18 @@ const Hero: React.FC = () => {
 
                     <motion.h1
                         variants={itemVariants}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6"
+                        className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6"
                     >
-                        Experience the <br />
+                        Experience the <br className="hidden xs:block" />
                         <span className="text-[#00A859]">Heart </span>of
                         Ethiopia.
                     </motion.h1>
 
-                    <motion.div variants={itemVariants} className="mb-10">
-                        <span className="text-gray-100 text-lg md:text-xl">
+                    <motion.div
+                        variants={itemVariants}
+                        className="mb-8 xs:mb-10"
+                    >
+                        <span className="text-gray-100 text-base xs:text-lg md:text-xl block xs:inline">
                             Freshly prepared{" "}
                             <span className="text-[#00A859] underline decoration-2 underline-offset-8">
                                 traditional dishes
@@ -80,43 +83,53 @@ const Hero: React.FC = () => {
                         </span>
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="mb-12">
+                    <motion.div
+                        variants={itemVariants}
+                        className="mb-10 xs:mb-12"
+                    >
                         <motion.button
                             whileHover={{
                                 scale: 1.05,
                                 backgroundColor: "#f13a5b",
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-[#E92348] text-white px-8 py-4 rounded-xl flex items-center gap-3 font-semibold shadow-lg transition-colors"
+                            className="w-full xs:w-fit bg-[#E92348] text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg transition-colors"
                         >
                             <Truck size={20} />
                             Order Now
                         </motion.button>
                     </motion.div>
 
+                    {/* Email Subscription Box */}
                     <motion.div
                         variants={itemVariants}
-                        className="w-full max-w-md bg-white rounded-full p-1.5 flex items-center shadow-2xl"
+                        className="w-full max-w-md bg-white rounded-2xl xs:rounded-full p-1.5 flex flex-col xs:flex-row items-center shadow-2xl gap-2 xs:gap-0"
                     >
-                        <Send size={18} className="ml-4 text-gray-400" />
-                        <input
-                            type="email"
-                            placeholder="Your email address"
-                            className="flex-1 px-4 py-2 outline-none text-gray-800 bg-transparent"
-                        />
-                        <button className="bg-[#E92348] text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-[#c41d3d] transition-colors">
+                        <div className="flex items-center w-full px-2">
+                            <Send
+                                size={18}
+                                className="ml-2 text-gray-400 hidden xs:block"
+                            />
+                            <input
+                                type="email"
+                                placeholder="Your email address"
+                                className="flex-1 px-4 py-3 xs:py-2 outline-none text-gray-800 bg-transparent text-sm"
+                            />
+                        </div>
+                        <button className="w-full xs:w-auto bg-[#E92348] text-white px-8 py-3 rounded-xl xs:rounded-full font-semibold hover:bg-[#c41d3d] transition-colors text-sm">
                             Subscribe
                         </button>
                     </motion.div>
                 </div>
 
-                {/* Promo Circle - Floating & Entry Animation */}
+                {/* Promo Circle - Positioned for Large Screens only */}
                 <motion.div
-                    className="absolute top-1/2 right-10 hidden lg:block -translate-y-1/2"
+                    className="absolute top-1/2 right-4 xl:right-10 hidden xl:block -translate-y-1/2"
                     initial={{ scale: 0, rotate: -45 }}
                     animate={{ scale: 1, rotate: -5 }}
                     transition={{
                         type: "spring",
+                        staggerChildren: 0.1,
                         stiffness: 260,
                         damping: 20,
                         delay: 1,
@@ -129,12 +142,19 @@ const Hero: React.FC = () => {
                             repeat: Infinity,
                             ease: "easeInOut",
                         }}
-                        className="bg-[#E92348] px-12 py-6 rounded-full shadow-2xl"
+                        className="bg-[#E92348] px-8 py-6 xl:px-12 xl:py-8 rounded-full shadow-2xl"
                     >
                         <div className="border-2 border-dashed border-white/40 p-4 rounded-full text-white text-center">
-                            <span className="text-xs uppercase">MADE</span>
-                            <div className="text-4xl font-bold">WITH</div>
-                            <span className="text-xs uppercase"> LOVE</span>
+                            <span className="text-[10px] xl:text-xs uppercase">
+                                MADE
+                            </span>
+                            <div className="text-2xl xl:text-4xl font-bold">
+                                WITH
+                            </div>
+                            <span className="text-[10px] xl:text-xs uppercase">
+                                {" "}
+                                LOVE
+                            </span>
                         </div>
                     </motion.div>
                 </motion.div>
