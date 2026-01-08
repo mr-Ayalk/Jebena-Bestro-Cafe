@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Menu, ChevronDown, Globe, X } from "lucide-react"; // Added X for close
+import { Menu, ChevronDown, Globe, X } from "lucide-react";
 import Image from "next/image";
 import Logo from "../assets/images/jebenalogo.png";
 import Link from "next/link";
@@ -41,7 +41,7 @@ const Navbar = () => {
                     : "bg-transparent"
             }`}
         >
-            <div className="container flex items-center justify-between h-20 px-4 xs:px-6">
+            <div className="container mx-auto flex items-center justify-between h-20 px-4 xs:px-6">
                 {/* Logo Section */}
                 <div className="flex items-center gap-2">
                     <div className="relative w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 flex-shrink-0">
@@ -125,8 +125,8 @@ const Navbar = () => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Book Table Button */}
-                    <Link href="/booktable" className="hidden xs:block">
+                    {/* Book Table Button - Hidden on mobile/tablet, shown on Desktop */}
+                    <Link href="/booktable" className="hidden sm:block">
                         <button className="bg-[#FF385C] hover:bg-red-400 text-white px-4 py-2 md:px-7 md:py-2.5 rounded-md text-xs md:text-sm font-bold shadow-lg transition-all">
                             Book A Table
                         </button>
@@ -172,7 +172,6 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <hr className="my-2" />
-                            {/* Language Switcher for Mobile */}
                             <div className="flex items-center gap-4">
                                 {languages.map((lang) => (
                                     <button
@@ -191,9 +190,10 @@ const Navbar = () => {
                                     </button>
                                 ))}
                             </div>
-                            {/* Small device only "Book" button */}
-                            <Link href="/booktable" className="xs:hidden mt-2">
-                                <button className="w-full bg-[#FF385C] text-white py-3 rounded-md font-bold">
+
+                            {/* NEW: Book Table button inside the mobile menu */}
+                            <Link href="/booktable" className="mt-2">
+                                <button className="w-full bg-[#FF385C] text-white py-3 rounded-md font-bold shadow-md active:scale-95 transition-transform">
                                     Book A Table
                                 </button>
                             </Link>
