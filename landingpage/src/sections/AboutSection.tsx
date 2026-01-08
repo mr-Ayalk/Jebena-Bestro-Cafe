@@ -57,7 +57,7 @@ const AboutSection = () => {
                             About Our Food
                         </span>
 
-                        <h2 className="text-5xl md:text-6xl font-black text-[#1a1a1a] leading-tight mb-8">
+                        <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] leading-tight mb-8">
                             The Best Delicious Food <br /> Made From Us...
                         </h2>
 
@@ -108,7 +108,7 @@ const AboutSection = () => {
                             </div>
 
                             {/* Foundation Tag */}
-                            <div className="bg-[#1a1a1a] text-white px-8 py-3 rounded-full flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase">
+                            <div className="bg-[#00A859] text-white px-8 py-3 rounded-full flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase">
                                 <span>Foundation, Since</span>
                                 <span className="text-[#FFB800]">
                                     Oct 21, 2019

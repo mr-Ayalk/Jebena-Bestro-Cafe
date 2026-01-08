@@ -140,7 +140,11 @@ const BestSellers = () => {
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold font-poppins text-[#333] mb-4">
-                        Explore Our Best Dishes
+                        <span className="text-[#00A859] font-bold text-xs uppercase tracking-[0.2em] mb-2">
+                            {" "}
+                            Explore
+                        </span>
+                        <br /> Our Best Dishes
                     </h2>
                     <p className="text-[#666] font-sans leading-relaxed">
                         Experience the authentic soul of Ethiopia. Each dish is

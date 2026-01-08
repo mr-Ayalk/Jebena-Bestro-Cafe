@@ -20,8 +20,8 @@ const ReservationSection = () => {
                     <div className="lg:col-span-7 p-8 md:p-10 flex flex-col justify-between">
                         <div>
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="w-10 h-[3px] bg-[#FF6B35] rounded-full"></span>
-                                <span className="text-[#FF6B35] font-black text-[10px] uppercase tracking-[0.3em]">
+                                <span className="w-10 h-[3px] bg-[#00A859] rounded-full"></span>
+                                <span className="text-[#00A859] font-black text-[10px] uppercase tracking-[0.3em]">
                                     Reservations
                                 </span>
                             </div>
@@ -74,7 +74,7 @@ const ReservationSection = () => {
                             </div>
                         </div>
 
-                        <button className="w-full mt-10 bg-[#00A859] text-white py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#FF6B35] transition-all group active:scale-[0.98]">
+                        <button className="w-full mt-10 bg-[#FF385C] text-white py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#FF6B35] transition-all group active:scale-[0.98]">
                             Confirm Table
                             <ArrowRight
                                 size={16}

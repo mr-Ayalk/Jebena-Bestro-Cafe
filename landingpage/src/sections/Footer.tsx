@@ -139,7 +139,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar with the Yellow Line */}
-                <div className="mt-24 pt-10 border-t-[6px] border-[#FFB800] flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="mt-24 pt-10 border-t-[6px] border-[#00A859] flex flex-col md:flex-row items-center justify-between gap-8">
                     <p className="text-sm font-black text-gray-400 tracking-tight">
                         <span className="text-[#FF385C]">
                             © 2026 Jebena Bestro

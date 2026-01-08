@@ -42,7 +42,7 @@ const Navbar = () => {
                         />
                     </div>
                     <div className="text-2xl font-bold flex items-center gap-1">
-                        <span className="text-[#E92348] italic">Jebena </span>
+                        <span className="text-[#FF385C] italic">Jebena </span>
                         {"  "}
                         <span
                             className={`${
@@ -101,7 +101,7 @@ const Navbar = () => {
                                 isScrolled ? "text-gray-800" : "text-white"
                             }`}
                         >
-                            <Globe size={16} className="text-[#FFA500]" />
+                            <Globe size={16} className="text-[#FF385C]" />
                             {currentLang}
                             <ChevronDown
                                 size={14}
@@ -138,7 +138,7 @@ const Navbar = () => {
 
                     {/* Login Button (Desktop) */}
                     <Link href="/registration">
-                        <button className="hidden md:block bg-[#FFA500] hover:bg-orange-600 text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                        <button className="hidden md:block bg-[#FF385C] hover:bg-orange-600 text-white px-7 py-2.5 rounded-md text-sm font-bold shadow-lg shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:scale-95">
                             Book A Table
                         </button>
                     </Link>

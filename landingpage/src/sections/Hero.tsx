@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className="max-w-2xl lg:max-w-4xl">
                     <p className="text-sm font-medium mb-4">
                         AUTHENTIC{" "}
-                        <span className="font-bold text-[#FFC12B]">
+                        <span className="font-bold text-[#00A859] ">
                             FLAVORS
                         </span>
                     </p>
@@ -35,14 +35,14 @@ of Ethiopia.
                     </h1> */}
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6">
                         Experience the <br />
-                        <span className="text-[#FFC12B]">Heart </span>of
+                        <span className="text-[#00A859]">Heart </span>of
                         Ethiopia.
                     </h1>
 
                     <div className="mb-10">
                         <span className="text-gray-600 text-lg">
                             Freshly prepared{" "}
-                            <span className="text-[#E92348] underline">
+                            <span className="text-[#00A859] underline">
                                 traditional dishes
                             </span>{" "}
                             every day
