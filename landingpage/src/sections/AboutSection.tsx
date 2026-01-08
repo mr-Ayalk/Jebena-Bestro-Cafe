@@ -71,9 +71,15 @@ const AboutSection = () => {
                         {/* Stats Row */}
                         <div className="grid grid-cols-3 gap-4 mb-12 border-t border-gray-100 pt-10">
                             {[
-                                { value: "250+", label: "Satisfied Clients" },
-                                { value: "153+", label: "Food Categories" },
-                                { value: "25+", label: "Award Win" },
+                                {
+                                    value: "25,000+",
+                                    label: "Satisfied Clients",
+                                },
+                                {
+                                    value: "200+",
+                                    label: "Dishes Served per Day",
+                                },
+                                { value: "250+", label: "Active Clients" },
                             ].map((stat, i) => (
                                 <div key={i} className="flex flex-col">
                                     <h5 className="text-4xl font-black text-[#FFB800] mb-1">
@@ -98,13 +104,7 @@ const AboutSection = () => {
                                         height={48}
                                     />
                                 </div>
-                                <Image
-                                    src="/images/hero.png"
-                                    alt="Signature"
-                                    width={100}
-                                    height={40}
-                                    className="grayscale opacity-80"
-                                />
+                                <p className="italic">JEBENA BESTRO</p>
                             </div>
 
                             {/* Foundation Tag */}

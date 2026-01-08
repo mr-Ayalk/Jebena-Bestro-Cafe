@@ -1,6 +1,7 @@
 import React from "react";
 import { UtensilsCrossed, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 const AboutFood = () => {
     return (
         <section
@@ -74,9 +75,11 @@ const AboutFood = () => {
 
                         {/* CTA and Quote */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6">
-                            <button className="bg-[#FF385C] text-white px-8 py-4 rounded-md font-bold hover:bg-[#e63252] transition-colors shadow-lg">
-                                More About Us
-                            </button>
+                            <Link href="/about">
+                                <button className="bg-[#FF385C] text-white px-8 py-4 rounded-md font-bold hover:bg-[#e63252] transition-colors shadow-lg">
+                                    More About Us
+                                </button>
+                            </Link>
 
                             <div className="border-l-2 border-orange-400 pl-4">
                                 <p className="text-orange-400 font-bold text-xs uppercase tracking-wider">
