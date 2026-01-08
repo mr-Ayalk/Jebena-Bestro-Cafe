@@ -2,9 +2,9 @@ import React from "react";
 import {
     MapPin,
     Phone,
-    Calendar,
-    Clock,
-    Users,
+    // Calendar,
+    // Clock,
+    // Users,
     ArrowRight,
     Navigation,
 } from "lucide-react";
@@ -115,7 +115,7 @@ const ReservationSection = () => {
                                     border: 0,
                                     filter: "grayscale(0.1) brightness(1.02)",
                                 }}
-                                allowFullScreen=""
+                                // allowFullScreen=""
                                 loading="lazy"
                             ></iframe>
                             {/* Overlay Button for real map navigation */}
