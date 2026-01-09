@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Send, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 const Hero: React.FC = () => {
