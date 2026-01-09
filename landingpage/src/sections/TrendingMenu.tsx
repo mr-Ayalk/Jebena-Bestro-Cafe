@@ -64,7 +64,7 @@ const TrendingMenu = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl xs:text-4xl md:text-5xl font-black text-[#1A1A1A] tracking-tight uppercase"
+                        className="text-3xl xs:text-4xl md:text-5xl font-black text-[#1A1A1A] tracking-tight "
                     >
                         Authentic{" "}
                         <span className="text-[#E92348]">Ethiopian</span> Menu

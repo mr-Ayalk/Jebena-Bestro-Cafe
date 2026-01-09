@@ -43,7 +43,7 @@ const AboutSection = () => {
                             </div>
 
                             {/* Yellow Badge (Bottom Right) */}
-                            <div className="absolute bottom-0 right-0 bg-[#FFB800] p-6 xs:p-8 md:p-12 rounded-tl-[40px] xs:rounded-tl-[60px] max-w-[200px] xs:max-w-[280px]">
+                            <div className="absolute bottom-0 right-0 bg-[#E92348] p-6 xs:p-8 md:p-12 rounded-tl-[40px] xs:rounded-tl-[60px] max-w-[200px] xs:max-w-[280px]">
                                 <h4 className="font-bold text-lg xs:text-xl md:text-2xl text-white leading-tight">
                                     We Cook <br />
                                     Traditional <br />
@@ -86,7 +86,7 @@ const AboutSection = () => {
                                     key={i}
                                     className="flex flex-col items-start xs:items-center text-left xs:text-center"
                                 >
-                                    <h5 className="text-3xl xs:text-3xl md:text-4xl font-black text-[#FFB800] mb-1">
+                                    <h5 className="text-3xl xs:text-3xl md:text-4xl font-black text-[#E92348] mb-1">
                                         {stat.value}
                                     </h5>
                                     <p className="text-[10px] font-black text-gray-800 uppercase tracking-wider">
