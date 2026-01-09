@@ -8,13 +8,13 @@ const AboutSection = () => {
         <section className="relative py-16 xs:py-24 bg-white overflow-hidden font-sans">
             {/* Background Watermark Text - Scaled for mobile */}
             <div className="absolute top-4 left-4 xs:top-10 xs:left-10 text-[60px] xs:text-[100px] lg:text-[180px] font-black text-gray-100 opacity-40 z-0 pointer-events-none tracking-tighter whitespace-nowrap">
-                Jebena Bestro
+                Jebena Bistro
             </div>
 
             {/* Background Watermark Text "FAST FOOD" - Hidden on mobile, shown on large screens */}
             <div className="absolute top-1/2 right-0 -translate-y-1/2 text-[80px] lg:text-[120px] font-black text-gray-50 opacity-40 z-0 pointer-events-none hidden md:flex flex-col leading-none">
-                <span>Jebena Bestro</span>
-                <span>Jebena Bestro</span>
+                <span>Jebena Bistro</span>
+                <span>Jebena Bistro</span>
             </div>
 
             <div className="container mx-auto px-4 xs:px-6 relative z-10">
@@ -110,7 +110,7 @@ const AboutSection = () => {
                                     />
                                 </div>
                                 <p className="italic font-bold text-sm xs:text-base">
-                                    JEBENA BESTRO
+                                    JEBENA BISTRO
                                 </p>
                             </div>
 

@@ -61,7 +61,7 @@ const Navbar = () => {
                                     : "text-white"
                             }
                         >
-                            Bestro
+                            Bistro
                         </span>
                     </div>
                 </div>

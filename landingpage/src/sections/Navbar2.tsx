@@ -61,7 +61,7 @@ const Navbar2 = () => {
                                     : "text-black"
                             }
                         >
-                            Bestro
+                            Bistro
                         </span>
                     </div>
                 </div>

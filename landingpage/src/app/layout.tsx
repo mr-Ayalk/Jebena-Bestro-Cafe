@@ -11,7 +11,7 @@ const inter = Inter({
 
 // app/layout.tsx
 export const metadata: Metadata = {
-    title: "Jebena-Bestro-Ethiopian-Restaurant-US",
+    title: "Jebena-Bistro-Ethiopian-Restaurant-US",
     description:
         "Experience the Heart of Ethiopia in Every Bite at Jebena Bistro",
     icons: {
