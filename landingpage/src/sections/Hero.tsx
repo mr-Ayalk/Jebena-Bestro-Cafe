@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
                     </motion.div>
 
                     {/* Improved Subscription Box for Mobile */}
-                    <motion.div
+                    {/* <motion.div
                         variants={itemVariants}
                         className="w-full max-w-md"
                     >
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
                                 Subscribe
                             </button>
                         </div>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
 
                 {/* Promo Circle - Now hidden on small screens to avoid overlap */}
