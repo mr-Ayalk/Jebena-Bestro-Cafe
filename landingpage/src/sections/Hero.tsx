@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
             />
 
             {/* Darker Overlay for better readability on mobile */}
-            <div className="absolute inset-0 bg-black/60 z-[1]" />
+            {/* <div className="absolute inset-0 bg-black/60 z-[1]" /> */}
 
             {/* Content Container */}
             <motion.div
@@ -147,4 +147,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-;
