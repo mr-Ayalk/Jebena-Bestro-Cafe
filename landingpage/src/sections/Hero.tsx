@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <section className="relative h-screen min-h-[700px] w-full overflow-hidden pt-28">
+        <section className="relative h-screen  w-full overflow-hidden pt-28">
             {/* Background Image - Forced to cover full screen height */}
             <motion.div
                 initial={{ scale: 1.15, opacity: 0 }}
